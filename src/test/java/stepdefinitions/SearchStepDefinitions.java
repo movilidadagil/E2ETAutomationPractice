@@ -86,7 +86,7 @@ public class SearchStepDefinitions {
         System.out.println("resultList: "+resultList.size());
         actor.attemptsTo(
                 Ensure.that(CurrentSearchResultCount.information())
-                        .contains(1 +" 1 results have been found.")
+                        .contains(resultList.size() +" results have been found.")
         );
         try {
             Thread.sleep(10000);
